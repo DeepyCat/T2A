@@ -1,0 +1,151 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: 200px 1fr 200px;
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
+    grid-template-areas:
+        "header header header"
+        "left main right"
+        "footer footer footer";
+}
+
+.header {
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background: linear-gradient(135deg, #757879ea, #9fa6a8, #74b9ff);
+    color: white;
+}
+
+.menu a {
+    margin-left: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.left-sidebar {
+    grid-area: left;
+    background: #dfe6e9;
+    padding: 20px;
+}
+
+.left-sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.left-sidebar li {
+    margin-bottom: 10px;
+}
+
+.left-sidebar a {
+    display: block;
+    padding: 10px;
+    background: white;
+    border: 2px solid #b2bec3;
+    border-radius: 8px;
+    color: #2d3436;
+    text-decoration: none;
+    margin-bottom: 12px;
+    transition: 0.3s;
+}
+
+.left-sidebar a:hover {
+    border-color: #0984e3;
+    background: #6ec3ee;
+    transform: scale(1.05);
+}
+
+.right-sidebar {
+    grid-area: right;
+    background: #dfe6e9;
+    padding: 20px;
+    
+}
+
+.info-box {
+    background: white;
+    padding: 15px;
+    margin-bottom: 12px;
+    border: 2px solid #b2bec3;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.info-box:hover {
+    border-color: #0984e3;
+    background: #73caf5;
+    transform: scale(1.05);
+}
+
+.main {
+    grid-area: main;
+    padding: 20px;
+    
+}
+
+.cards {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.card {
+    flex: 1;
+    background: #74b9ff;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-bottom: 20px;
+    border-radius: 10px black solid;
+    overflow: hidden;
+}
+
+.data-table th, .data-table td {
+    border: 1px solid #636e72;
+    padding: 10px;
+    
+}
+
+.images {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.images img {
+    width: 200px;
+    border: 3px solid transparent;
+    transition: 0.3s;
+}
+
+.images img:hover {
+    border-color: #0984e3;
+    border-radius: 4px;
+    transform: scale(1.05);
+}
+
+.footer {
+    grid-area: footer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background: #2d3436;
+    color: white;
+}
